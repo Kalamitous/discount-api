@@ -10,15 +10,15 @@ const CustomerView = () => {
     const [discount, setDiscount] = useState("")
 
     useLayoutEffect(() => {
-		checkDiscount()
-	}, [])
+        checkDiscount()
+    }, [])
 
     const checkDiscount = () => {
         axios.get("http://localhost:8080/user/customer/discount")
-		.then(resp => {
+        .then(resp => {
             setDiscount(resp.data)
-		})
-		.catch(err => console.error(err))
+        })
+        .catch(err => console.error(err))
     }
 
     // Initialize store item components.
@@ -122,13 +122,13 @@ const CheckoutModal = props => {
     }
 
     const onInputChange = (e) => {
-		setCode(e.target.value)
+        setCode(e.target.value)
     }
 
     // Verifies whether the user inputted the correct discount code.
     const onButtonClick = () => {
         axios.get("http://localhost:8080/user/customer/discount")
-		.then(resp => {
+        .then(resp => {
             if (code !== "") {
                 if (resp.data === code) {
                     setAlert("success")
@@ -136,8 +136,8 @@ const CheckoutModal = props => {
                     setAlert("error")
                 }
             }
-		})
-		.catch(err => console.error(err))
+        })
+        .catch(err => console.error(err))
     }
     
     return (
