@@ -1,0 +1,43 @@
+h1 {
+    margin-bottom: 0!important;
+}
+
+.App {
+    padding: 32px;
+    min-width: 640px;
+}
+
+.View {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    margin-bottom: 14px;
+}
+
+.header Button {
+    float: right;
+}
+
+.placeholder {
+    height: 160px;
+    background-color: #ececec;
+}
+
+.discountAlert {
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 1280px) {
+    .View {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .View {
+        width: 100%;
+    }
+}
